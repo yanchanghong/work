@@ -1,0 +1,82 @@
+{
+	"qualityIcon": [
+		{
+			"title": "通用设备",
+			"icon": "fa fa-archive",
+			"colour": "text-aqua"
+		},
+		{
+			"title": "制造装备",
+			"icon": "fa fa-cogs",
+			"colour": "text-blue"
+		},
+		{
+			"title": "环保设备",
+			"icon": "fa fa-leaf",
+			"colour": "text-green"
+		},
+		{
+			"title": "物流车辆",
+			"icon": "fa fa-truck",
+			"colour": "text-aqua"
+		}],
+	"kpiIcon":[
+		{
+			"title": "二氧化碳",
+			"icon": "ps-lg ps-co2"
+		},
+		{
+			"title": "灌溉",
+			"icon": "ps-lg ps-irrigation"
+		},
+		{
+			"title": "空气湿度",
+			"icon": "ps-lg ps-air-humidity"
+		},
+		{
+			"title": "空气温度",
+			"icon": "ps-lg ps-air-temperature"
+		},
+		{
+			"title": "摄像头",
+			"icon": "ps-lg ps-video-camera"
+		},
+		{
+			"title": "水量",
+			"icon": "ps-lg ps-water"
+		},
+		{
+			"title": "日照",
+			"icon": "ps-lg ps-sunshine"
+		},
+		{
+			"title": "土壤湿度",
+			"icon": "ps-lg ps-soil-humidity"
+		},
+		{
+			"title": "土壤温度",
+			"icon": "ps-lg ps-soil-temperature"
+		},
+		{
+      "title": "卷帘",
+      "icon": "ps-lg ps-juanlian"
+    },
+    {
+      "title": "卷膜",
+      "icon": "ps-lg ps-juanmo"
+    },
+    {
+      "title": "排风扇",
+      "icon": "ps-lg ps-paifengshan"
+    },
+    {
+      "title": "喷淋",
+      "icon": "ps-lg ps-penlin"
+    },
+		{
+			"title": "相机",
+			"icon": "ps-lg ps-camera"
+		}
+	]
+
+}

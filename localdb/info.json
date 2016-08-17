@@ -1,0 +1,416 @@
+{
+	"messages": [
+		{
+			"title": "测试邮件1",
+			"content": "这是一个测试用的.",
+			"time": "早上 11:23"
+		}, {
+			"title": "测试邮件2",
+			"content": "这是一个测试用的.",
+			"time": "下午 14:23"
+		}, {
+			"title": "测试邮件3",
+			"content": "这是一个测试用的.",
+			"time": "昨天"
+		}, {
+			"title": "测试邮件4",
+			"content": "这是一个测试用的.",
+			"time": "上周"
+		}, {
+			"title": "测试邮件5",
+			"content": "这是一个测试用的.",
+			"time": "上周"
+		}	],
+	"tasks": [
+		{
+			"title": "任务1",
+			"content": "这是一个测试用的.",
+			"status": "success",
+			"value": 100
+		}, {
+			"title": "任务2",
+			"content": "这是一个测试用的.",
+			"status": "info",
+			"value": 80
+		}, {
+			"title": "任务3",
+			"content": "这是一个测试用的.",
+			"status": "warning",
+			"value": 50
+		}, {
+			"title": "任务4",
+			"content": "这是一个测试用的.",
+			"status": "danger",
+			"value": 20
+		}
+	],
+	"alerts": [
+		{
+			"title": "新的告警",
+			"content": "这是一个测试用的.",
+			"status": "fa-tasks",
+			"lv": "1",
+			"time": "1 分钟 之前"
+		},
+		{
+			"title": "新的告警",
+			"content": "这是一个测试用的.",
+			"status": "fa-tasks",
+			"lv": "2",
+			"time": "2 分钟 之前"
+		},
+		{
+			"title": "新的告警",
+			"content": "这是一个测试用的.",
+			"status": "fa-tasks",
+			"lv": "3",
+			"time": "3 分钟 之前"
+		},
+		{
+			"title": "新的告警",
+			"content": "这是一个测试用的.",
+			"status": "fa-tasks",
+			"lv": "4",
+			"time": "4 分钟 之前"
+		}
+	],
+	"echartsOption": {
+		"tooltip": {
+			"trigger": "axis"
+		},
+		"legend": {
+			"data": ["邮件营销", "联盟广告", "视频广告", "直接访问", "搜索引擎"]
+		},
+		"toolbox": {
+			"show": true,
+			"feature": {
+				"mark": {
+					"show": true
+				},
+				"dataView": {
+					"show": true,
+					"readOnly": false
+				},
+				"magicType": {
+					"show": true,
+					"type": ["line", "bar", "stack", "tiled"]
+				},
+				"restore": {
+					"show": true
+				},
+				"saveAsImage": {
+					"show": true
+				}
+			}
+		},
+		"calculable": true,
+		"xAxis": [
+			{
+				"type": "category",
+				"boundaryGap": false,
+				"data": ["周一", "周二", "周三", "周四", "周五", "周六", "周日"]
+			}
+		],
+		"yAxis": [
+			{
+				"type": "value"
+			}
+		],
+		"series": [
+			{
+				"name": "邮件营销",
+				"type": "line",
+				"stack": "总量",
+				"itemStyle": {
+					"normal": {
+						"areaStyle": {
+							"type": "default"
+						}
+					}
+				},
+				"data": [120, 132, 101, 134, 90, 230, 210]
+			}, {
+				"name": "联盟广告",
+				"type": "line",
+				"stack": "总量",
+				"itemStyle": {
+					"normal": {
+						"areaStyle": {
+							"type": "default"
+						}
+					}
+				},
+				"data": [220, 182, 191, 234, 290, 330, 310]
+			}, {
+				"name": "视频广告",
+				"type": "line",
+				"stack": "总量",
+				"itemStyle": {
+					"normal": {
+						"areaStyle": {
+							"type": "default"
+						}
+					}
+				},
+				"data": [150, 232, 201, 154, 190, 330, 410]
+			}, {
+				"name": "直接访问",
+				"type": "line",
+				"stack": "总量",
+				"itemStyle": {
+					"normal": {
+						"areaStyle": {
+							"type": "default"
+						}
+					}
+				},
+				"data": [320, 332, 301, 334, 390, 330, 320]
+			}, {
+				"name": "搜索引擎",
+				"type": "line",
+				"stack": "总量",
+				"itemStyle": {
+					"normal": {
+						"areaStyle": {
+							"type": "default"
+						}
+					}
+				},
+				"data": [820, 932, 901, 934, 1290, 1330, 1320]
+			}
+		]
+	},
+	"echarts2Option" : {
+	    "title" : {
+	        "text": "动态数据",
+	        "subtext": "纯属虚构"
+	    },
+	    "tooltip" : {
+	        "trigger": "item"
+	    },
+	    "legend": {
+	        "data":["随机数据1","随机数据2","随机数据3","随机数据4","随机数据5"]
+	    },
+	    "toolbox": {
+	        "show" : true,
+	        "feature" : {
+	            "mark" : {"show": true},
+	            "dataView" : {"show": true, "readOnly": false},
+	            "restore" : {"show": true},
+	            "saveAsImage" : {"show": true}
+	        }
+	    },
+	    "polar" : [
+	        {
+	            "indicator" : [
+	                { "text" : "指标一" },
+	                { "text" : "指标二" },
+	                { "text" : "指标三" },
+	                { "text" : "指标四" },
+	                { "text" : "指标五" }
+	            ],
+	            "center" : [768, 225],
+	            "radius" : 100
+	        }
+	    ],
+    		"calculable" : false,
+	    "series" : [
+	        {
+	            "name":"pie",
+	            "type":"pie",
+	            "radius" : [0, 110],
+	            "center": [250, 225],
+	            "data": [{
+	                        "name": "随机数据1" ,
+	                        "value": 1
+	                    },
+	                    {
+	                        "name": "随机数据2" ,
+	                        "value": 2
+	                    },
+	                    {
+	                        "name": "随机数据3" ,
+	                        "value": 3
+	                    },
+	                    {
+	                        "name": "随机数据4" ,
+	                        "value": 4
+	                    },
+	                    {
+	                        "name": "随机数据5" ,
+	                        "value": 5
+	                    }
+	             ]
+	        },
+	        {
+	            "name": "radar",
+	            "type": "radar",
+	            "itemStyle": {"normal": {"areaStyle": {"type": "default"}}},
+	            "data": [{
+	                        "name": "随机数据1" ,
+	                        "value": [820, 932, 901, 934, 1290]
+	                    },
+	                    {
+	                        "name": "随机数据2" ,
+	                        "value": [82, 92, 91, 94, 190]
+	                    },
+	                    {
+	                        "name": "随机数据3" ,
+	                        "value": [20, 932, 701, 94, 120]
+	                    },
+	                    {
+	                        "name": "随机数据4" ,
+	                        "value": [1120, 932, 901, 234, 1290]
+	                    },
+	                    {
+	                        "name": "随机数据5" ,
+	                        "value": [320, 932, 901, 734, 1290]
+	                    }
+	             ]
+	        }
+	    ]
+	},
+	"echarts3Option" : {
+	    "title" : {
+	        "text": "动态数据",
+	        "subtext": "纯属虚构"
+	    },
+	    "tooltip" : {
+	        "trigger": "axis"
+	    },
+	    "legend": {
+	        "data":["最新成交价", "预购队列"]
+	    },
+	    "toolbox": {
+	        "show" : true,
+	        "feature" : {
+	            "mark" : {"show": true},
+	            "dataView" : {"show": true, "readOnly": false},
+	            "magicType" : {"show": true, "type": ["line", "bar"]},
+	            "restore" : {"show": true},
+	            "saveAsImage" : {"show": true}
+	        }
+	    },
+	    "dataZoom" : {
+	        "show" : false,
+	        "start" : 0,
+	        "end" : 100
+	    },
+	    "xAxis" : [
+	        {
+	            "type" : "category",
+	            "boundaryGap" : true,
+	            "data" : ["4:00:01", "4:00:11", "4:00:21", "4:00:31", "4:00:41", "4:00:51", "4:01:01","4:01:11","4:01:21","4:01:31"]
+	        },
+	        {
+	            "type" : "category",
+	            "boundaryGap" : true,
+	            "data" : [1, 2, 3, 4, 5, 6, 7,8,9,10]
+	
+	        }
+	    ],
+	    "yAxis" : [
+	        {
+	            "type" : "value",
+	            "scale": true,
+	            "name" : "价格",
+	            "boundaryGap": [0.2, 0.2]
+	        },
+	        {
+	            "type" : "value",
+	            "scale": true,
+	            "name" : "预购量",
+	            "boundaryGap": [0.2, 0.2]
+	        }
+	    ],
+	    "series" : [
+	        {
+	            "name":"预购队列",
+	            "type":"bar",
+	            "xAxisIndex": 1,
+	            "yAxisIndex": 1,
+	            "data":[100, 200, 300, 400, 500, 600, 700,800,900,1000]
+	        },
+	        {
+	            "name":"最新成交价",
+	            "type":"line",
+	            "data":[11.1, 20.1, 30.1, 40.1, 50.1, 60.1, 70.1,80.1,90.1,100.1]
+	        }
+	    ]
+	},
+	"alertStyle" : [
+		{ "dataField":"title" ,"headerText":"告警名称" ,"width":"100" ,"visible":true},
+		{ "dataField":"message" ,"headerText":"告警消息" ,"width":"200" ,"visible":true},
+		{ "dataField":"severity" ,"headerText":"告警级别" ,"width":"60" ,"visible":true},
+		{ "dataField":"state" ,"headerText":"状态" ,"width":"60" ,"visible":true},
+		{ "dataField":"arisingTime" ,"headerText":"最近告警时间" ,"width":"140" ,"visible":true},
+		{ "dataField":"devName" ,"headerText":"设备名称" ,"width":"100" ,"visible":false},
+		{ "dataField":"appName" ,"headerText":"应用名称" ,"width":"100" ,"visible":false},
+		{ "dataField":"receiveTime" ,"headerText":"接收时间" ,"width":"140" ,"visible":false},
+		{ "dataField":"count" ,"headerText":"次数" ,"width":"60" ,"visible":false},
+		{ "dataField":"agentId" ,"headerText":"采集系统" ,"width":"80" ,"visible":false},
+		{ "dataField":"related" ,"headerText":"子告警" ,"width":"80" ,"visible":false},
+		{ "dataField":"owner" ,"headerText":"处理人" ,"width":"80" ,"visible":false},
+		{ "dataField":"eventId" ,"headerText":"事件编号" ,"width":"120" ,"visible":false},
+		{ "dataField":"alertId" ,"headerText":"告警编号" ,"width":"120" ,"visible":false},
+		{ "dataField":"srcEventId" ,"headerText":"原始事件编号" ,"width":"120" ,"visible":false},
+		{ "dataField":"nodeId" ,"headerText":"节点编号" ,"width":"120" ,"visible":false},
+		{ "dataField":"alertCode" ,"headerText":"告警类型编号" ,"width":"120" ,"visible":false},
+		{ "dataField":"alertType" ,"headerText":"告警类型" ,"width":"120" ,"visible":false},
+		{ "dataField":"nodeType" ,"headerText":"节点类型" ,"width":"100" ,"visible":false},
+		{ "dataField":"relatedNodeId" ,"headerText":"辅助节点编号" ,"width":"120" ,"visible":false},
+		{ "dataField":"instance" ,"headerText":"接入行" ,"width":"100" ,"visible":false},
+		{ "dataField":"instance2" ,"headerText":"交易渠道" ,"width":"100" ,"visible":false},
+		{ "dataField":"kpiValue" ,"headerText":"KPI值" ,"width":"80" ,"visible":false},
+		{ "dataField":"kpiCode" ,"headerText":"KPI编号" ,"width":"120" ,"visible":false},
+		{ "dataField":"kpiUnit" ,"headerText":"KPI单位" ,"width":"80" ,"visible":false},
+		{ "dataField":"title" ,"headerText":"事件标题" ,"width":"80" ,"visible":false},
+		{ "dataField":"causeAlertId" ,"headerText":"关联告警" ,"width":"120" ,"visible":false},
+		{ "dataField":"firstArisingTime" ,"headerText":"首次告警时间" ,"width":"140" ,"visible":false},
+		{ "dataField":"oldSeverity" ,"headerText":"首次级别" ,"width":"80" ,"visible":false},
+		{ "dataField":"updateTime" ,"headerText":"更新时间" ,"width":"140" ,"visible":false},
+		{ "dataField":"openTime" ,"headerText":"确认时间" ,"width":"140" ,"visible":false},
+		{ "dataField":"openTime" ,"headerText":"前转时间" ,"width":"140" ,"visible":false},
+		{ "dataField":"closeTime" ,"headerText":"关闭时间" ,"width":"140" ,"visible":false},
+		{ "dataField":"upgradeTime" ,"headerText":"升级时间" ,"width":"140" ,"visible":false},
+		{ "dataField":"upgradeCount" ,"headerText":"升级次数" ,"width":"60" ,"visible":false},
+		{ "dataField":"claimBy" ,"headerText":"确认人" ,"width":"80" ,"visible":false},
+		{ "dataField":"openBy" ,"headerText":"前转人" ,"width":"80" ,"visible":false},
+		{ "dataField":"closeBy" ,"headerText":"关闭人" ,"width":"80" ,"visible":false},
+		{ "dataField":"orderId" ,"headerText":"工单编号" ,"width":"100" ,"visible":false},
+		{ "dataField":"orderStatus" ,"headerText":"工单状态" ,"width":"80" ,"visible":false},
+		{ "dataField":"comments" ,"headerText":"备注" ,"width":"150" ,"visible":false},
+		{ "dataField":"tags" ,"headerText":"告警标记" ,"width":"150" ,"visible":false},
+		{ "dataField":"incidentId" ,"headerText":"故障编号" ,"width":"120" ,"visible":false},
+		{ "dataField":"activeState" ,"headerText":"活动状态" ,"width":"60" ,"visible":false},
+		{ "dataField":"age" ,"headerText":"延迟时间" ,"width":"140" ,"visible":false},
+		{ "dataField":"soundState" ,"headerText":"声音" ,"width":"60" ,"visible":false}
+	],
+	"systemProcess":[
+		{ "id": 4011, "dictCode": "systemProcessTemplate", "valueCode": "oneStep", "label": "一步工单","name":"第一步","param": "1" },
+		{ "id": 4012, "dictCode": "systemProcessTemplate", "valueCode": "twoStep", "label": "二步工单","name":"第二步", "param": "2" },
+		{ "id": 4013, "dictCode": "systemProcessTemplate", "valueCode": "threeStep", "label": "三步工单", "name":"第三步","param": "3" },
+		{ "id": 4014, "dictCode": "systemProcessTemplate", "valueCode": "fourStep", "label": "四步工单","name":"第四步", "param": "4" },
+		{ "id": 4015, "dictCode": "systemProcessTemplate", "valueCode": "fiveStep", "label": "五步工单", "name":"第五步","param": "5" }
+	],
+	"workOrderType":[
+		{"id": 1301, "dictCode": "ticketCategory", "valueCode":"10",  "label": "告警工单"  },
+		{"id": 1302, "dictCode": "ticketCategory", "valueCode":"20",  "label": "维修工单"  },
+		{"id": 1303, "dictCode": "ticketCategory", "valueCode":"30",  "label": "业务工单"  }
+	],
+	"orderPriorityCode":[
+		{"id": 1101, "dictCode": "orderPriority", "valueCode":"10",  "label": "低"  },
+		{"id": 1102, "dictCode": "orderPriority", "valueCode":"30",  "label": "中"  },
+		{"id": 1103, "dictCode": "orderPriority", "valueCode":"50",  "label": "高"  }
+	],
+	"priorityData":[
+		{"value":0,"name":"低"},
+		{"value":100,"name":"中"},
+		{"value":200,"name":"高"}
+	],
+	"statusData":[
+		{"value":10,"name":"草稿"},
+		{"value":100,"name":"处理中"},
+		{"value":200,"name":"已完成"}
+	]
+}

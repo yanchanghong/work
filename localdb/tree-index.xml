@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<node isType="true" label="系统硬件">
+    <node isType="true" model="graph" label="基本形状">
+        <node model="circle" label="圆形"/>
+        <node model="square" label="方形"/>
+        <node model="diamond" label="菱形"/>
+        <node model="cross" label="十字"/>
+        <node model="xShape" label="交叉"/>
+        <node model="triangleUp" label="三角1"/>
+        <node model="triangleDown" label="三角2"/>
+        <node model="triangleRight" label="三角3"/>
+        <node model="triangleLeft" label="三角4"/>  
+    	<node model="chinaMap" label="三角4"/>  
+    </node>
+    <node isType="true" model="switch" label="拓扑元素">
+	    <node isType="true" model="host" label="主机设备">
+	        <node model="server" label="服务器"/>
+	        <node model="cluster" label="集群"/>
+	        <node model="HP-SuperDome" label="HP-SuperDome"/>
+	        <node model="HP-N4000" label="HP-N4000"/>
+	        <node model="HP-RP2470" label="HP-RP2470"/>
+	        <node model="HP-RP3440" label="HP-RP3440"/>
+	        <node model="HP-RP4440" label="HP-RP4440"/>
+	        <node model="HP-RP7410" label="HP-RP7410"/>
+	        <node model="HP-RP7420" label="HP-RP7420"/>
+	        <node model="HP-RP8400" label="HP-RP8400"/>
+	        <node model="HP-RP8420" label="HP-RP8420"/>
+	        <node model="HP-RP8440" label="HP-RP8440"/>
+	        <node model="HP-rx6600" label="HP-rx6600"/>
+	        <node model="HP-rx8640" label="HP-rx8640"/>
+	    </node>
+	    <node isType="true" model="net" label="网络设备">
+	    	<node model="cloud" label="Internet"/>
+	        <node model="router" label="路由器"/>
+	        <node model="switch" label="交换机"/>
+	        <node model="switch3" label="三层交换机"/>
+	        <node model="core_switch" label="核心交换机"/>
+	        <node model="firewall" label="防火墙"/>
+	        <node model="ASA5520" label="ASA5520"/>
+	        <node model="Cisco-4506" label="Cisco-4506"/>
+	        <node model="CISCO-7507" label="CISCO-7507"/>
+	        <node model="Cisco-Catalyst-6509" label="Cisco-Catalyst-6509"/>
+	        <node model="s8512" label="s8512"/>
+	        <node model="databaseTableSpace" label="数据库表空间"/>
+	        <node model="middlewareApache" label="中间件-Apache"/>
+	        <node model="middlewareIHS" label="中间件-IHS"/>
+	        <node model="middlewareMB" label="中间件-MB"/>
+	        <node model="middlewareMQ" label="中间件-MQ"/>
+	        <node model="middlewareTomcat" label="中间件-Tomcat"/>
+	        <node model="middlewareWAS" label="中间件-WAS"/>
+	        <node model="progress" label="进程"/>
+	        <node model="serverAIX" label="服务器-AIX"/>
+	        <node model="serverLinux" label="服务器-Linux"/>
+	    </node>
+	    <node isType="true" model="storage" label="存储">
+	        <node model="backup" label="带库"/>
+	        <node model="storage" label="盘阵"/>
+	        <node model="san_switch" label="SAN交换机"/>
+	        <node model="msl6060" label="msl6060"/>
+	        <node model="XP12000" label="XP12000"/>
+	        <node model="XP128" label="XP128"/>
+	        <node model="XP512" label="XP512"/>
+	        <node model="STK-L700E" label="STK-L700E"/>
+	        <node model="HP-SAN-2_64" label="HP-SAN-2_64"/>
+	        <node model="HP-SAN-4_256" label="HP-SAN-4_256"/>
+	        <node model="EMC-EDL4026" label="EMC-EDL4026"/>
+	        <node model="EMC-2501H" label="EMC-2501H"/>
+	    </node>
+	    <node isType="true" model="app" label="应用">
+	        <node model="database" label="数据库"/>
+	        <node model="middleware" label="中间件"/>
+	        <node model="app" label="应用"/>
+	        <node model="biz" label="业务"/>
+	        <node model="biz_module" label="业务模块" />
+	        <node model="biz_module2" label="业务模块" />
+	        <node model="biz_module3" label="业务模块" />
+	        <node model="biz_module4" label="业务模块" />
+	        <node model="biz_module5" label="业务模块" />
+	        <node model="biz_module6" label="业务模块" />
+	        <node model="h_biz_module" label="业务模块" />
+	        <node model="dom_high_bill" label="国内高额欺诈" />
+	        <node model="dr_system" label="容灾系统" />
+	        <node model="ele_high_bill" label="电子化高额" />
+	        <node model="file_down_gen" label="文件下发生成" />
+	        <node model="file_receive" label="文件传输（接收）" />
+	        <node model="file_send" label="文件传输（发送）" />
+	        <node model="info_manage" label="信息管理" />
+	        <node model="peripheral_module" label="外围模块" />
+	        <node model="pre-process" label="预处理" />
+	        <node model="query_system" label="查询系统" />
+	        <node model="settle_accounts" label="结算帐务" />
+	        <node model="system_maintain" label="系统维护" />
+	        <node model="tadig_system" label="TADIG测试系统" />
+	        <node model="feecheck" label="资费校验" />
+	        <node model="consultanal" label="咨询分析" />
+	        <node model="financesettlement" label="财务清算" />
+	        <node model="ehur" label="EHUR" />
+	        <node model="incomemgt" label="收入管理" />
+	        <node model="emailfax" label="邮件传真" />
+	        <node model="rapcreate" label="RAP生成" />
+	        <node model="reportcreate" label="报告生成" />
+	    </node>
+		<node isType="true" model="host" label="机房环境">
+	        <node model="PUD" label="PUD"/>
+	        <node model="UPS" label="UPS"/>
+	        <node model="DLY" label="电量仪"/>
+	        <node model="FL" label="防雷"/>
+	        <node model="JG" label="机柜"/>
+	        <node model="KT" label="空调"/>
+	        <node model="LS" label="漏水"/>
+	        <node model="WSDCG" label="温湿传感器"/>
+	        <node model="XFJ" label="新风机"/>
+	        <node model="YGQ" label="烟感器"/>
+	    </node>
+    </node>
+</node>    

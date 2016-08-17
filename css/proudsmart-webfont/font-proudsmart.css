@@ -1,0 +1,114 @@
+@font-face {
+  font-family: 'proudsmart';
+  src: url('../../fonts/proudsmart.eot?7c0kz9');
+  src: url('../../fonts/proudsmart.eot?7c0kz9#iefix') format('embedded-opentype'), url('../../fonts/proudsmart.ttf?7c0kz9') format('truetype'), url('../../fonts/proudsmart.woff?7c0kz9') format('woff'), url('../../fonts/proudsmart.svg?7c0kz9#proudsmart') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*[class^="ps-"],
+[class*=" ps-"] {*/
+.proudsmart {
+  display: inline-block;
+  font: normal normal normal 14px/1 proudsmart;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.ps-mushroom:before {
+    content: "\e915";
+}
+.ps-planting:before {
+    content: "\e916";
+}
+.ps-current_production:before {
+    content: "\e917";
+}
+.ps-estimated_output:before {
+    content: "\e918";
+}
+.ps-daily_output:before {
+    content: "\e91e";
+}
+.ps-duration:before {
+    content: "\e91f";
+}
+.ps-sandglass:before {
+    content: "\e920";
+}
+.ps-task:before {
+    content: "\e921";
+}
+.ps-current_production_p:before {
+    content: "\e922";
+}
+.ps-pattern:before {
+    content: "\e923";
+}
+.ps-number:before {
+    content: "\e924";
+}
+.ps-air-humidity:before {
+    content: "\e900";
+}
+.ps-air-temperature:before {
+    content: "\e901";
+}
+.ps-camera:before {
+    content: "\e902";
+}
+.ps-sunshine:before {
+    content: "\e903";
+}
+.ps-video-camera:before {
+    content: "\e904";
+}
+.ps-water:before {
+    content: "\e905";
+}
+.ps-fan:before {
+    content: "\e906";
+}
+.ps-electric_motor02:before {
+    content: "\e907";
+}
+.ps-electric_motor:before {
+    content: "\e908";
+}
+.ps-Co2:before {
+    content: "\e909";
+}
+.ps-soil_temperature:before {
+    content: "\e90a";
+}
+.ps-soil_humidity:before {
+    content: "\e90b";
+}
+.ps-irrigation:before {
+    content: "\e90c";
+}
+.ps-spraying:before {
+    content: "\e90d";
+}
+.ps-chart_brokenline:before {
+    content: "\e90e";
+}
+.ps-userinfo:before {
+    content: "\e90f";
+}
+.ps-user:before {
+    content: "\e910";
+}
+.ps-group:before {
+    content: "\e911";
+}
+.ps-center:before {
+    content: "\e912";
+}
+.ps-server:before {
+    content: "\e913";
+}
+.ps-app:before {
+    content: "\e914";
+}

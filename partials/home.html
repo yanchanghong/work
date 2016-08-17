@@ -1,0 +1,83 @@
+<!-- Content Header (Page header) -->
+<style type="text/css">
+table thead th {
+	cursor: default;
+}
+
+table thead th.sortable {
+	cursor: pointer;
+}
+
+.relative {
+	position: relative;
+}
+
+.relative .popover {
+	width: 200px;
+}
+
+.pagination-sm {
+	margin: 0;
+}
+
+.global-search {
+	margin-bottom: 20px;
+}
+</style>
+<section class="content-header">
+	<h1>
+		网关状态<small></small>
+	</h1>
+	<ol class="breadcrumb">
+		<li><a href="#index"><i class="fa fa-dashboard"></i> 首页</a></li>
+
+	</ol>
+</section>
+
+<!-- Main content -->
+
+<section class="content">
+	<div class="row">
+
+		<form role="form" class="form-horizontal tab-pane active"
+			name="myForm" novalidate ng-submit="processForm()">
+			<div class="col-xs-12">
+				<!-- Application buttons -->
+				<div class="box">
+					<div class="box-header">
+						<h3 class="box-title">网关状态</h3>
+					</div>
+
+					<!-- /.box-body -->
+					<!-- /.box-header -->
+					<div class="box-body" style="font-size:14px;">
+					<div class="row">
+                       <div class="col-xs-6">
+                          <div style="margin-left:30px;margin-top:30px;">网关软件版本</div>
+                          <div style="margin-left:30px;margin-top:30px;">系统版本更新时间</div>
+                          <div style="margin-left:30px;margin-top:30px;">节点在线数量</div>
+                          <div style="margin-left:30px;margin-top:30px;">系统CPU使用率</div>
+                           <div style="margin-left:30px;margin-top:30px;">系统内存使用率</div>
+						    <div style="margin-left:30px;margin-top:30px;">系统磁盘空间使用率</div>
+						</div>
+						<div class="col-xs-6">
+                          <div style="margin-left:30px;margin-top:30px;">3.00</div>
+                          <div style="margin-left:30px;margin-top:30px;">2016/07/04</div>
+                          <div style="margin-left:30px;margin-top:30px;">{{onlineTotal <= 2?onlineTotal:(onlineTotal-2)}}</div>
+                           <div style="margin-left:30px;margin-top:30px;">{{sysParameter.cpu}}%</div>
+                            <div style="margin-left:30px;margin-top:30px;">{{sysParameter.memory}}%</div>
+                             <div style="margin-left:30px;margin-top:30px;">{{sysParameter.io}}%</div>
+						</div>
+						</div>
+					</div>
+				</div>
+				<!-- /.box -->
+
+
+				<!-- /.col -->
+			</div>
+		</form>
+		<!-- /.row -->
+</section>
+
+<!-- /.content -->

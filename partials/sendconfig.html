@@ -1,0 +1,137 @@
+<!-- Content Header (Page header) -->
+ <style type="text/css">
+   table thead th {
+  cursor: default;
+}
+
+table thead th.sortable {
+  cursor: pointer;
+}
+
+.relative {
+  position: relative;
+}
+
+.relative .popover {
+  width: 200px;
+}
+
+.pagination-sm {
+  margin: 0;
+}
+
+.global-search {
+  margin-bottom: 20px;
+}
+    </style>
+<section class="content-header">
+  <h1>设备配置<small></small></h1>
+  <ol class="breadcrumb">
+    <li><a href="#index"><i class="fa fa-dashboard"></i> 首页</a></li>
+    <li class="active">设备配置</li>
+  </ol>
+</section>
+
+<!-- Main content -->
+ <form role="form" class="form-horizontal tab-pane active" name="myForm" novalidate ng-submit="processForm()">
+<section class="content" >
+  <div class="row">
+    <div class="col-xs-12">
+      <!-- Application buttons -->
+      <div class="box">
+        <div class="box-header">
+         
+            <div class="form-group">
+              <div class="col-sm-5">
+                <label>网关ID:</label>
+                <input class="form-control input-sm" type="text" ng-model="vm.network" />
+              </div>
+              <div class="col-sm-5">
+                <label>信号频道:</label>
+                <input class="form-control input-sm" type="text" ng-model="vm.channel" />
+              </div>
+              
+            </div>
+
+         
+
+          
+
+        </div>
+       
+        <!-- /.box-body -->
+       
+      </div>
+      <!-- /.box -->
+
+      <div class="box">
+        <div class="box-header">
+          <h3 class="box-title">网关&AP&设备配置</h3>
+        </div>
+        <!-- /.box-header -->
+       <div class="box-body">
+      
+	  
+	  <table class="table table-bordered table-hover">
+  <thead>
+  <tr>
+    <th ng-repeat="column in vm.columns"  ng-click="vm.sort.toggle(column)"
+        ng-class="{sortable: column.sortable !== false}" style="width:{{column.width}};">
+      {{column.label}}
+      <i ng-if="column.name === vm.sort.column && vm.sort.direction"
+         class="glyphicon {{vm.sort.direction}}"></i>
+    </th>
+  </tr>
+  </thead>
+  <tbody>
+  
+  <tr ng-repeat="item in vm.items">
+    <td>
+      {{item.deviceType}}
+        <span class="btn btn-primary btn-xs pull-right" title="编辑" ng-if="!item.$editing"
+              ng-click="item.$editing = true">
+          <i class="glyphicon glyphicon-pencil"></i>
+        </span>
+        <span class="btn btn-primary btn-xs pull-right" title="保存" ng-if="item.$editing"
+              ng-click="item.$editing = false">
+          <i class="glyphicon glyphicon-floppy-disk"></i>
+        </span>
+    </td>
+    <td>
+      <span ng-if="!item.$editing">{{item.deviceId}}</span>
+      <input type="text" class="form-control" ng-model="item.deviceId" ng-if="item.$editing"/>
+    </td>
+    <td >
+      <span ng-if="!item.$editing">{{item.joinKey}}</span>
+      <input type="text" class="form-control" ng-model="item.joinKey" ng-if="item.$editing"/>
+    </td>
+    <td >
+      <span ng-if="!item.$editing">{{item.deviceTag}}</span>
+      <input type="text" class="form-control" ng-model="item.deviceTag" ng-if="item.$editing"/>
+    </td>
+   
+  </tr>
+  </tbody>
+</table>
+         
+
+        </div>
+        <!-- /.box-body -->
+       
+        <!-- /.box-header -->
+        <div class="box-body">
+          <div class="table-responsive">
+		  <div style="float:right;">
+           <input class="btn btn-default popover-show" type="submit" value="下发配置" >
+		   </div>
+        </div>
+        <!-- /.box-body -->
+      </div>
+      <!-- /.box -->
+    </div>
+    <!-- /.col -->
+  </div>
+  <!-- /.row -->
+</section>
+ </form>
+<!-- /.content -->

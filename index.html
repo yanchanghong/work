@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>普奥云 ｜ PSC</title>
+
+<!-- 响应屏幕宽度 -->
+<meta
+	content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"
+	name="viewport" />
+
+<link rel="shortcut icon" href="images/proudsmart_logo100.png"
+	type="image/vnd.microsoft.icon">
+
+<!-- Bootstrap 样式-->
+<link rel="stylesheet"
+	href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+
+<!-- Font Awesome 字体图标-->
+<link rel="stylesheet"
+	href="bower_components/font-awesome/css/font-awesome.min.css">
+
+<!-- Bootstrap dialog响应样式 -->
+<link rel="stylesheet"
+	href="bower_components/bootstrap3-dialog/dist/css/bootstrap-dialog.min.css">
+
+<!-- Bootstrap treeview -->
+<link rel="stylesheet"
+	href="bower_components/bootstrap-treeview/dist/bootstrap-treeview.min.css">
+
+<!-- daterangepicker 日期选择-->
+<link rel="stylesheet"
+	href="bower_components/bootstrap-daterangepicker/daterangepicker.css">
+
+<!-- DataTables bootstrap3样式-->
+<link rel="stylesheet"
+	href="bower_components/datatables/media/css/dataTables.bootstrap.min.css"
+	rel="stylesheet">
+
+<!-- Ionicons 图标-->
+<link rel="stylesheet"
+	href="bower_components/Ionicons/css/ionicons.min.css">
+
+<!-- fullCalendar 2.4.0-->
+<link rel="stylesheet"
+	href="bower_components/fullcalendar/dist/fullcalendar.min.css">
+<link rel="stylesheet"
+	href="bower_components/fullcalendar/dist/fullcalendar.print.css"
+	media="print">
+
+<link rel="stylesheet"
+	href="bower_components/angular-growl-v2/build/angular-growl.min.css" />
+
+<!-- iCheck -->
+<link rel="stylesheet" href="bower_components/iCheck/skins/all.css">
+
+<!--multiselect-->
+<link rel="stylesheet"
+	href="bower_components/multiselect/css/multi-select.css">
+
+<!-- slick -->
+<link rel="stylesheet"
+	href="bower_components/slick-carousel/slick/slick.css">
+<link rel="stylesheet"
+	href="bower_components/slick-carousel/slick/slick-theme.css">
+
+<!-- 普奥自定义字体 -->
+<link rel="stylesheet" href="css/proudsmart-webfont/font-proudsmart.css">
+
+<!-- AdminLTE 样式 -->
+<link rel="stylesheet" href="css/admin-lte/AdminLTE.css">
+
+<!-- AdminLTE 皮肤. 保存在css/skins目录下 -->
+<link rel="stylesheet" href="css/admin-lte/skins/_all-skins.css">
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    		<![endif]-->
+<style type="text/css">
+@charset "UTF-8";
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak,
+	.x-ng-cloak, .ng-hide {
+	display: none !important;
+}
+
+ng\:form {
+	display: block;
+}
+
+.ng-animate-start {
+	clip: rect(0, auto, auto, 0);
+	-ms-zoom: 1.0001;
+}
+
+.ng-animate-active {
+	clip: rect(-1px, auto, auto, 0);
+	-ms-zoom: 1;
+}
+</style>
+</head>
+
+<body class="hold-transition skin-blue sidebar-mini fixed">
+	<div class="wrapper" ng-controller="AppNavCtrl">
+		<div growl></div>
+		<header class="main-header">
+
+			<!-- Logo -->
+			<div class="logo no-padding">
+				<div class="pull-left " ng-click="gotoHomePage()"
+					style="width: 120px; background: #367fa9; padding-left: 0px; padding-top: 0px;">
+					<a href="index.html"><img src="images/svg/logo.svg" width="94"
+						height="32" type="image/svg+xml" style="margin-top: -4px;" /></a>
+				</div>
+				<a class="sidebar-toggle"
+					style="float: right; padding: 0 8px 0 0; font-size: 15px; color: #fff"
+					data-toggle="offcanvas" role="button"> <span class="sr-only">Toggle
+						navigation</span>
+				</a>
+				<!--<b class="logo-title">运营中心</b>-->
+			</div>
+
+			<!-- Header Navbar: style can be found in header.less -->
+			<nav class="navbar navbar-static-top" role="navigation">
+				<!-- Sidebar toggle button 缩放位置替换
+					<a class="sidebar-toggle" data-toggle="offcanvas" role="button">
+						<span class="sr-only">Toggle navigation</span>
+					</a>
+					-->
+				<a ng-cloak href="#"
+					class="sidebar-toggle2 active proudsmart ps-center"><span
+					class="hidden-xs"> ProudLink Network Manager</span></a>
+
+				<!-- Navbar Right Menu -->
+				<div class="navbar-custom-menu">
+					<ul class="nav navbar-nav">
+						<!-- 导航栏右侧的数据将后期实现 -->
+						<li class="dropdown messages-menu"><a class="dropdown-toggle"
+							data-toggle="dropdown"> <i class="fa fa-envelope-o"></i> <span
+								class="label label-success" ng-bind="messages.length"></span>
+						</a>
+							<ul class="dropdown-menu">
+								<li class="header">你有 {{messages.length}} 消息</li>
+								<li>
+
+									<ul class="menu">
+										<li ng-repeat="message in messages"><a>
+												<div class="pull-left">
+													<img ng-src="images/header/user.png" class="img-circle"
+														alt="User Image">
+												</div>
+												<h4>
+													{{message.title}} <small><i class="fa fa-clock-o"></i>
+														{{message.time}}</small>
+												</h4>
+												<p>{{message.content}}</p>
+										</a></li>
+
+									</ul>
+								</li>
+								<li class="footer"><a>读取所有邮件</a></li>
+							</ul></li>
+
+						<li class="dropdown notifications-menu"><a
+							class="dropdown-toggle" data-toggle="dropdown"> <i
+								class="fa fa-bell-o"></i> <span class="label label-warning"
+								ng-bind="alerts.length"></span>
+						</a>
+							<ul class="dropdown-menu">
+								<li class="header">你有 {{alerts.length}} 个通知</li>
+								<li>
+
+									<ul class="menu">
+										<li ng-repeat="alert in alerts"><a> <i
+												class="fa fa-warning text-aqua"
+												ng-class="{'1':'text-aqua','2':'text-green','3':'text-yellow',4:'text-red'}[alert.lv]"></i>
+												{{alert.time}}{{alert.title}}
+										</a></li>
+									</ul>
+								</li>
+								<li class="footer"><a>查看所有通知</a></li>
+							</ul></li>
+
+						<li class="dropdown tasks-menu"><a class="dropdown-toggle"
+							data-toggle="dropdown"> <i class="fa fa-flag-o"></i> <span
+								class="label label-danger" ng-bind="tasks.length"></span>
+						</a>
+							<ul class="dropdown-menu">
+								<li class="header">你有 {{tasks.length}} 任务</li>
+								<li>
+
+									<ul class="menu">
+										<li ng-repeat="task in tasks"><a>
+												<h3>
+													{{task.title}} <small class="pull-right">{{task.value}}%</small>
+												</h3>
+												<div class="progress progress-striped active">
+													<div class="progress-bar"
+														ng-class="{'success':'progress-bar-success','info':'progress-bar-info','warning':'progress-bar-warning','danger':'progress-bar-danger'}[task.status]"
+														style="width: {{task.value" role="progressbar"
+														aria-valuenow="{{task.value}}" aria-valuemin="0"
+														aria-valuemax="100">
+														<span class="sr-only">{{task.value}}% Complete</span>
+													</div>
+												</div>
+										</a></li>
+
+									</ul>
+								</li>
+								<li class="footer"><a>查看所有任务</a></li>
+							</ul></li>
+
+						<li class="dropdown user user-menu"><a
+							class="dropdown-toggle" data-toggle="dropdown"> <img
+								src="images/header/user.png" class="user-image" alt="User Image">
+								<span class="hidden-xs" ng-bind="userInfo.userName"></span>
+						</a>
+							<ul class="dropdown-menu">
+								<!-- User image -->
+								<li class="user-header"><img src="images/header/user.png"
+									class="img-circle" alt="User Image">
+									<p>
+										{{userInfo.userName}} <small>最近登录时间{{lastLoginTime}}</small>
+									</p></li>
+
+								<li class="user-footer">
+									<div class="pull-left">
+										<a href="#/updatepwd"
+											class="btn btn-default btn-flat">修改密码</a>
+									</div>
+									<div class="pull-right">
+										<a ng-click="logout()" class="btn btn-default btn-flat">退出</a>
+									</div>
+								</li>
+							</ul></li>
+					</ul>
+				</div>
+			</nav>
+		</header>
+		<!-- 左侧立柱。包含标识和侧边栏 -->
+		<aside class="main-sidebar">
+			<!-- sidebar: style can be found in sidebar.less -->
+			<section class="sidebar">
+				<!-- Sidebar user panel 
+					<a class="btn btn-block btn-flat" data-toggle="offcanvas"><i class="fa fa-bars"></i></a>
+					-->
+				<!-- search form -->
+
+
+				<!-- /.search form -->
+				<!-- sidebar menu: : style can be found in sidebar.less 
+          -->
+				<div class="sidebar-menu">
+
+					<div style="margin-left: 50px; margin-top: 10px;">
+						<a href="#articleMenu" class="nav-header menu-first collapsed"
+							data-toggle="collapse"><i class="icon-book icon-large"></i>
+							网关</a>
+						<ul id="articleMenu" class="nav nav-list collapse menu-second">
+							<li><a id="tuoputu" style="cursor: pointer;"><i
+									class="icon-pencil"></i> 拓扑图</a></li>
+							<li><a id="devicelist" style="cursor: pointer;"><i
+									class="icon-pencil"></i> 设备指令</a></li>
+							<li><a id="nodelist" style="cursor: pointer;"><i
+									class="icon-pencil"></i> 设备列表</a></li>
+							<li><a id="devicealarm" style="cursor: pointer;"><i
+									class="icon-pencil"></i> 设备告警</a></li>
+						</ul>
+					</div>
+					<div style="margin-left: 50px; margin-top: 30px;">
+						<a href="#manager" class="nav-header menu-first collapsed"
+							data-toggle="collapse"><i class="icon-book icon-large"></i>
+							设置</a>
+						<ul id="manager" class="nav nav-list collapse menu-second">
+						<li><a id="snedconfig" style="cursor: pointer;"><i
+									class="icon-pencil"></i> 设备配置</a></li>
+									<li><a id="snedconfig" style="cursor: pointer;"><i
+									class="icon-pencil"></i> 设备配置</a></li>
+							<li><a id="timeshezhi" style="cursor: pointer;"><i
+									class="icon-pencil"></i> 时间设置</a></li>
+							<li><a id="wangluojiekou" style="cursor: pointer;"><i
+									class="icon-pencil"></i> 以太网设置</a></li>
+							<li><a id="wangluojiekou" style="cursor: pointer;"><i
+									class="icon-pencil"></i> 无限网络设置</a></li>
+							<li><a id="anquanshezhi" style="cursor: pointer;"><i
+									class="icon-pencil"></i> 安全设置</a></li>
+							<li><a id="xieyishezhi" style="cursor: pointer;"><i
+									class="icon-pencil"></i> 协议设置</a></li>
+						</ul>
+					</div>
+					<div style= "margin-left: 50px; margin-top: 30px;">
+						<a href="#maintenace" class="nav-header menu-first collapsed"
+							data-toggle="collapse"><i class="icon-book icon-large"></i>
+							维护</a>
+						<ul id="maintenace" class="nav nav-list collapse menu-second">
+							<li><a id="command" style="cursor: pointer;"><i
+									class="icon-pencil"></i> 命令</a></li>
+							<li><a id="systemupdate" style="cursor: pointer;"><i
+									class="icon-pencil"></i> 系统更新</a></li>
+							<li><a id="nodeupdate" style="cursor: pointer;"><i
+									class="icon-pencil"></i> 节点更新</a></li>
+						</ul>
+					</div>
+				</div>
+
+			</section>
+			<!-- /.sidebar -->
+		</aside>
+
+		<!-- 内容容器. 包含ng－view -->
+		<div class="content-wrapper contentminheight" ng-view></div>
+		<!-- /.content-wrapper -->
+
+		<footer class="main-footer">
+			<div class="pull-right hidden-xs">
+				<b>版本</b> 2.0.0
+			</div>
+			<strong>Copyright &copy; 2016 <a
+				href="http://www.proudsmart.com">普奥云</a>.
+			</strong> 版权所有.
+		</footer>
+	</div>
+	<!-- ./wrapper -->
+	<script>
+		window.HOST_TYPE = "2";
+		window.BMap_loadScriptTime = (new Date).getTime();
+	</script>
+	<script src="bower_components/requirejs/require.js" data-main="js/main"></script>
+	<script src="bower_components/jquery/jquery.min.js"></script>
+
+	<script>
+		$('#yewu').mouseover(function() {
+			console.log('hello');
+			$("#jiedian").show();
+
+		});
+
+		$('#yewu').mouseleave(function() {
+			$("#jiedian").hide();
+		});
+
+		$("#snedconfig").click(function() {
+			window.location.href = "#/sendconfig";
+			console.log("#/sendconfig/");
+		});
+
+		$("#devicelist").click(function() {
+			window.location.href = "#/devicelist";
+			console.log("#/devicelist/");
+		});
+		$("#tuoputu").click(function() {
+			window.location.href = "#/force";
+			console.log("#/force/");
+		});
+		$("#nodelist").click(function() {
+			window.location.href = "#/nodelist";
+			console.log("#/nodelist/");
+			var minheight = $(".contentminheight").css("min-height");
+			console.log("height:" + minheight);
+		});
+		$("#timeshezhi").click(function() {
+			 window.location.href = "#/time";
+			console.log("#/time/"); 
+			/* var time = new Date();
+			console.log(time.getHours()); */
+		});
+		$("#wangluojiekou").click(function() {
+			 window.location.href = "#/networkset";
+			console.log("#/networkset/"); 
+			/* var time = new Date();
+			console.log(time.getHours()); */
+		});
+		
+		$("#anquanshezhi").click(function() {
+			 window.location.href = "#/updatepwd";
+			console.log("#/updatepwd/"); 
+			/* var time = new Date();
+			console.log(time.getHours()); */
+		});
+		function show() {
+			var minheight = $(".contentminheight").css("min-height");
+			//console.log("height:" + minheight);
+			$(".viewchart").css("height", minheight);
+			//console.log("load dom finish" + $(".viewchart").css("height"));
+		}
+
+		setInterval(show, 300);
+		function myrefresh() {
+			//判断当前页面是首页
+			// console.log(window.location.hash);
+			var path = window.location.hash;
+			if (path == "#/force") {
+				window.location.reload();
+			}
+			//window.location.reload();
+		}
+		setInterval(myrefresh, 180000); //指定1秒刷新一次
+	</script>
+</body>
+</html>

@@ -1,0 +1,467 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<models>
+	<model name="node" class="com.proudsmart.iot.visi.topvis.element.IconNode">
+		<stateIcons>
+			<info>[assets/images/alert/info_top.png]</info>
+			<warning>[assets/images/alert/warning_top.png]</warning>
+			<minor>[assets/images/alert/minor_top.png]</minor>
+			<major>[assets/images/alert/major_top.png]</major>
+			<critical>[assets/images/alert/critical_top.png]</critical>
+		</stateIcons>
+	</model>
+ 
+	<model name="alert" class="com.proudsmart.iot.visi.topvis.element.IconNode">
+		<icon>[assets/img/icon/orange.png]</icon>
+	</model>
+ 
+	<model name="kpi" class="com.proudsmart.iot.visi.topvis.element.IconNode">
+		<icon>[assets/img/icon/green.png]</icon>
+	</model>
+ 
+	<model name="graph" model="node" type="graph" class="com.proudsmart.iot.visi.topvis.element.GraphNode">
+		<smallIcon>[#com.proudsmart.iot.visi.topvis.element.ShapeSprite]</smallIcon>
+		<fillColor>0xffccccff</fillColor>
+		<lineColor>0xff333333</lineColor>
+		<lineWidth>1</lineWidth>
+	</model>
+	
+	<model name="default" model="graph">
+		<lineWidth>2</lineWidth> 
+		<graphWidth>16</graphWidth>
+		<graphHeight>16</graphHeight>
+		<fillColor>3050110720</fillColor>
+		<lineColor>4284913920</lineColor>
+		<shape>circle</shape>
+	</model>
+ 
+	<model name="diamond" model="graph">
+		<shape>diamond</shape>
+	</model>
+	
+	<model name="circle" model="graph">
+		<shape>circle</shape>
+	</model>
+	
+	<model name="square" model="graph">
+		<shape>square</shape>
+	</model>
+	
+	<model name="cross" model="graph">
+		<shape>cross</shape>
+	</model>
+	
+	<model name="xShape" model="graph">
+		<shape>x</shape>
+	</model>
+	
+	<model name="triangleUp" model="graph">
+		<shape>triangleUp</shape>
+	</model>
+	
+	<model name="triangleDown" model="graph">
+		<shape>triangleDown</shape>
+	</model>
+	
+	<model name="triangleRight" model="graph">
+		<shape>triangleRight</shape>
+	</model>
+	
+	<model name="triangleLeft" model="graph">
+		<shape>triangleLeft</shape>
+	</model>
+ 
+	<model name="biz" model="node" type="biz">
+		<icon>[assets/node/biz.png]</icon>
+		<smallIcon>[assets/node/small/biz.png]</smallIcon>
+	</model>
+ 
+	<model name="app" model="node" type="app">
+		<icon>[assets/node/app.swf]</icon>
+		<smallIcon>[assets/node/small/app.png]</smallIcon>
+	</model>
+ 
+	<model name="database" model="node" type="database">
+		<icon>[assets/node/database.swf]</icon>
+		<smallIcon>[assets/node/small/database.png]</smallIcon>
+	</model>
+ 
+	<model name="middleware" model="node" type="middleware">
+		<icon>[assets/node/middleware.swf]</icon>
+		<smallIcon>[assets/node/small/middleware.png]</smallIcon>
+	</model>
+ 
+	<model name="host" model="node" type="host">
+		<icon>[assets/node/server.swf]</icon>
+ 
+	</model>
+ 
+	<model name="server" model="node" type="server">
+ 		<icon>[assets/node/server.swf]</icon>
+	</model>
+ 
+	<model name="cluster" model="server" type="cluster">
+		<icon>[assets/node/super_dome.swf]</icon>
+		<smallIcon>[assets/node/small/cluster.png]</smallIcon>
+	</model>
+ 
+	<model name="storage" model="node" type="storage">
+		<icon>[assets/node/storage.swf]</icon>
+		<smallIcon>[assets/node/small/storage.png]</smallIcon>
+	</model>
+ 
+	<model name="backup" model="node" type="backup">
+		<icon>[assets/node/backup.swf]</icon>
+		<smallIcon>[assets/node/small/backup.png]</smallIcon>
+	</model>
+ 
+	<model name="net" model="node" type="net">
+		<icon>[assets/node/switch.swf]</icon>
+	</model>
+	
+	<model name="cloud" model="net">
+		<icon>[assets/node/library.swf#cloud]</icon>
+		<labelAlignH>center</labelAlignH>
+		<labelAlignV>middle</labelAlignV>
+	</model>
+ 
+	<model name="firewall" model="node" type="firewall">
+		<icon>[assets/node/firewall2.swf]</icon>
+		<smallIcon>[assets/node/small/firewall.png]</smallIcon>
+	</model>
+ 
+	<model name="switch" model="node" type="switch">
+		<icon>[assets/node/switch2.swf]</icon>
+	</model>
+	
+	<model name="switch3" model="node" type="switch">
+		<icon>[assets/node/switch.swf]</icon>
+	</model>
+ 
+	<model name="router" model="node" type="router">
+		<icon>[assets/node/router.swf]</icon>
+	</model>
+ 
+	<model name="super_dome" model="server">
+		<icon>[assets/node/super_dome.swf]</icon>
+		<smallIcon>[assets/node/small/cluster.png]</smallIcon>
+	</model>
+ 
+	<model name="n4000" model="server">
+		<icon>[assets/node/n4000.png]</icon>
+	</model>
+ 
+	<model name="rp8440" model="server">
+		<icon>[assets/node/rp8440.png]</icon>
+	</model>
+ 
+	<model name="rp4440" model="server">
+		<icon>[assets/node/rp4440.swf]</icon>
+	</model>
+ 
+	<model name="rp7410" model="server">
+		<icon>[assets/node/rp7410.swf]</icon>
+	</model>
+ 
+	<model name="rx2660" model="server">
+		<icon>[assets/node/rx2660.png]</icon>
+	</model>
+ 
+	<model name="san_switch" model="switch" base="host">
+		<icon>[assets/node/san_switch.swf]</icon>
+	</model>
+ 
+	<model name="core_switch" model="switch">
+		<icon>[assets/node/core_switch.swf]</icon>
+		<smallIcon>[assets/node/small/core_switch.png]</smallIcon>
+	</model>
+ 
+	<model name="msl6060" model="backup">
+		<icon>[assets/node/msl6060.swf]</icon>
+	</model>
+ 
+	<model name="STK-L700E" model="backup">
+		<icon>[assets/node/STK-L700E.swf]</icon>
+	</model>
+
+	<model name="HP-N4000" model="backup">
+		<icon>[assets/node/HP-N4000.swf]</icon>
+	</model>
+
+	<model name="HP-RP2470" model="backup">
+		<icon>[assets/node/HP-RP2470.swf]</icon>
+	</model>
+
+	<model name="HP-RP3440" model="backup">
+		<icon>[assets/node/HP-RP3440.swf]</icon>
+	</model>
+
+	<model name="HP-RP4440" model="backup">
+		<icon>[assets/node/HP-RP4440.swf]</icon>
+	</model>
+
+	<model name="HP-RP7410" model="backup">
+		<icon>[assets/node/HP-RP7410.swf]</icon>
+	</model>
+
+	<model name="HP-RP7420" model="backup">
+		<icon>[assets/node/HP-RP7420.png]</icon>
+	</model>
+
+	<model name="HP-RP8400" model="backup">
+		<icon>[assets/node/HP-RP8400.swf]</icon>
+	</model>
+
+	<model name="HP-RP8420" model="backup">
+		<icon>[assets/node/HP-RP8420.swf]</icon>
+	</model>
+
+	<model name="HP-RP8440" model="backup">
+		<icon>[assets/node/HP-RP8440.swf]</icon>
+	</model>
+
+	<model name="HP-rx6600" model="backup">
+		<icon>[assets/node/HP-rx6600.swf]</icon>
+	</model>
+
+	<model name="HP-rx8640" model="backup">
+		<icon>[assets/node/HP-rx8640.swf]</icon>
+	</model>
+
+	<model name="HP-SuperDome" model="backup">
+		<icon>[assets/node/HP-SuperDome.swf]</icon>
+	</model>
+
+	<model name="XP12000" model="backup">
+		<icon>[assets/node/XP12000.png]</icon>
+	</model>
+
+	<model name="XP128" model="backup">
+		<icon>[assets/node/XP128.png]</icon>
+	</model>
+
+	<model name="XP512" model="backup">
+		<icon>[assets/node/XP512.png]</icon>
+	</model>
+	
+	<model name="ASA5520" model="backup">
+		<icon>[assets/node/ASA5520.swf]</icon>
+	</model>
+	
+	<model name="Cisco-4506" model="backup">
+		<icon>[assets/node/Cisco-4506.png]</icon>
+	</model>
+	
+	<model name="CISCO-7507" model="backup">
+		<icon>[assets/node/CISCO-7507.png]</icon>
+	</model>
+	
+	<model name="Cisco-Catalyst-6509" model="backup">
+		<icon>[assets/node/Cisco-Catalyst-6509.png]</icon>
+	</model>
+	
+	<model name="HP-SAN-2_64" model="backup">
+		<icon>[assets/node/HP-SAN-2_64.png]</icon>
+	</model>
+	
+	<model name="HP-SAN-4_256" model="backup">
+		<icon>[assets/node/HP-SAN-4_256.png]</icon>
+	</model>
+	
+	<model name="EMC-EDL4026" model="backup">
+		<icon>[assets/node/EMC-EDL4026.png]</icon>
+	</model>
+	
+	<model name="EMC-2501H" model="backup">
+		<icon>[assets/node/EMC-2501H.png]</icon>
+	</model>
+	
+	<model name="s8512" model="backup">
+		<icon>[assets/node/s8512.png]</icon>
+	</model>
+ 
+	<model name="biz_module" model="biz">
+		<icon>[assets/node/biz_module.swf]</icon>
+	</model>
+	<model name="biz_module2" model="biz">
+		<icon>[assets/node/biz_module2.swf]</icon>
+	</model>
+	<model name="biz_module3" model="biz">
+		<icon>[assets/node/biz_module3.swf]</icon>
+	</model>
+	<model name="biz_module4" model="biz">
+		<icon>[assets/node/biz_module4.swf]</icon>
+	</model>
+	<model name="biz_module5" model="biz">
+		<icon>[assets/node/biz_module5.swf]</icon>
+	</model>
+	<model name="biz_module6" model="biz">
+		<icon>[assets/node/biz_module6.swf]</icon>
+	</model>
+	
+	<model name="h_biz_module" model="biz">
+		<icon>[assets/node/h_biz_module.swf]</icon>
+	</model>
+	
+	<model name="dom_high_bill" model="biz">
+		<icon>[assets/node/dom_high_bill.png]</icon>
+	</model>
+	<model name="dr_system" model="biz">
+		<icon>[assets/node/dr_system.png]</icon>
+	</model>
+	<model name="ele_high_bill" model="biz">
+		<icon>[assets/node/ele_high_bill.png]</icon>
+	</model>
+	<model name="file_down_gen" model="biz">
+		<icon>[assets/node/file_down_gen.png]</icon>
+	</model>
+	<model name="file_receive" model="biz">
+		<icon>[assets/node/file_receive.png]</icon>
+	</model>
+	<model name="file_send" model="biz">
+		<icon>[assets/node/file_send.png]</icon>
+	</model>
+	<model name="info_manage" model="biz">
+		<icon>[assets/node/info_manage.png]</icon>
+	</model>
+	<model name="peripheral_module" model="biz">
+		<icon>[assets/node/peripheral_module.png]</icon>
+	</model>
+	<model name="pre-process" model="biz">
+		<icon>[assets/node/pre-process.png]</icon>
+	</model>
+	<model name="query_system" model="biz">
+		<icon>[assets/node/query_system.png]</icon>
+	</model>
+	<model name="settle_accounts" model="biz">
+		<icon>[assets/node/settle_accounts.png]</icon>
+	</model>
+	<model name="system_maintain" model="biz">
+		<icon>[assets/node/system_maintain.png]</icon>
+	</model>
+	<model name="tadig_system" model="biz">
+		<icon>[assets/node/tadig_system.png]</icon>
+	</model>
+
+	<model name="feecheck" model="biz">
+		<icon>[assets/node/system_maintain.png]</icon>
+	</model>
+	<model name="consultanal" model="biz">
+		<icon>[assets/node/system_maintain.png]</icon>
+	</model>
+	<model name="financesettlement" model="biz">
+		<icon>[assets/node/system_maintain.png]</icon>
+	</model>
+	<model name="ehur" model="biz">
+		<icon>[assets/node/system_maintain.png]</icon>
+	</model>
+	<model name="incomemgt" model="biz">
+		<icon>[assets/node/system_maintain.png]</icon>
+	</model>
+	<model name="emailfax" model="biz">
+		<icon>[assets/node/system_maintain.png]</icon>
+	</model>
+	<model name="rapcreate" model="biz">
+		<icon>[assets/node/system_maintain.png]</icon>
+	</model>
+	<model name="reportcreate" model="biz">
+		<icon>[assets/node/system_maintain.png]</icon>
+	</model>
+	<model name="dg" model="node" type="cmc">		
+		<smallIcon>[assets/node/dg.jpg]</smallIcon>
+	</model>
+	<model name="fm" model="node" type="cmc">		
+		<smallIcon>[assets/node/form.jpg]</smallIcon>
+	</model>
+	<model name="ybp" model="node" type="cmc">		
+		<smallIcon>[assets/node/ybp.jpg]</smallIcon>
+	</model>
+	<model name="wdj" model="node" type="cmc">		
+		<smallIcon>[assets/node/wdj.jpg]</smallIcon>
+	</model>
+	<model name="zht" model="node" type="cmc">		
+		<smallIcon>[assets/node/zht.jpg]</smallIcon>
+	</model>
+	<model name="zxt" model="node" type="cmc">		
+		<smallIcon>[assets/node/zxt.jpg]</smallIcon>
+	</model>
+	<model name="bt" model="node" type="cmc">		
+		<smallIcon>[assets/node/bt.jpg]</smallIcon>
+	</model>
+	<model name="qst" model="node" type="cmc">		
+		<smallIcon>[assets/node/qst.jpg]</smallIcon>
+	</model>
+	<model name="chinaMap" model="node" type="cmc">
+		<icon>[assets/resources/chinaMap.swf]</icon>
+		<smallIcon>[assets/resources/chinaMap.swf]</smallIcon>
+	</model>
+	<model name="DLY" model="node" type="cmc">
+		<icon>[assets/resources/DLY.png]</icon>
+		<smallIcon>[assets/resources/DLY.png]</smallIcon>
+	</model>
+	<model name="FL" model="node" type="cmc">
+		<icon>[assets/resources/FL.png]</icon>
+		<smallIcon>[assets/resources/FL.png]</smallIcon>
+	</model>
+	<model name="JG" model="node" type="cmc">
+		<icon>[assets/resources/JG.png]</icon>
+		<smallIcon>[assets/resources/JG.png]</smallIcon>
+	</model>
+	<model name="KT" model="node" type="cmc">
+		<icon>[assets/resources/KT.png]</icon>
+		<smallIcon>[assets/resources/KT.png]</smallIcon>
+	</model>
+	<model name="LS" model="node" type="cmc">
+		<icon>[assets/resources/LS.png]</icon>
+		<smallIcon>[assets/resources/LS.png]</smallIcon>
+	</model>
+	<model name="PUD" model="node" type="cmc">
+		<icon>[assets/resources/PUD.png]</icon>
+		<smallIcon>[assets/resources/PUD.png]</smallIcon>
+	</model>
+	<model name="UPS" model="node" type="cmc">
+		<icon>[assets/resources/UPS.png]</icon>
+		<smallIcon>[assets/resources/UPS.png]</smallIcon>
+	</model>
+	<model name="WSDCG" model="node" type="cmc">
+		<icon>[assets/resources/WSDCG.png]</icon>
+		<smallIcon>[assets/resources/WSDCG.png]</smallIcon>
+	</model>
+	<model name="XFJ" model="node" type="cmc">
+		<icon>[assets/resources/XFJ.png]</icon>
+		<smallIcon>[assets/resources/XFJ.png]</smallIcon>
+	</model>
+	<model name="YGQ" model="node" type="cmc">
+		<icon>[assets/resources/YGQ.png]</icon>
+		<smallIcon>[assets/resources/YGQ.png]</smallIcon>
+	</model>
+	<model name="databaseTableSpace" model="node" type="databaseTableSpace">
+		<icon>[assets/swficon/databaseTableSpace.swf]</icon>
+	</model>
+	<model name="middlewareApache" model="node" type="middlewareApache">
+		<icon>[assets/swficon/middlewareApache.swf]</icon>
+	</model>
+	<model name="middlewareIHS" model="node" type="middlewareIHS">
+		<icon>[assets/swficon/middlewareIHS.swf]</icon>
+	</model>
+	<model name="middlewareMB" model="node" type="middlewareMB">
+		<icon>[assets/swficon/middlewareMB.swf]</icon>
+	</model>
+	<model name="middlewareMQ" model="node" type="middlewareMQ">
+		<icon>[assets/swficon/middlewareMQ.swf]</icon>
+	</model>
+	<model name="middlewareTomcat" model="node" type="middlewareTomcat">
+		<icon>[assets/swficon/middlewareTomcat.swf]</icon>
+	</model>
+	<model name="middlewareWAS" model="node" type="middlewareWAS">
+		<icon>[assets/swficon/middlewareWAS.swf]</icon>
+	</model>
+	<model name="progress" model="node" type="progress">
+		<icon>[assets/swficon/progress.swf]</icon>
+	</model>
+	<model name="serverAIX" model="node" type="serverAIX">
+		<icon>[assets/swficon/serverAIX.swf]</icon>
+	</model>
+	<model name="serverLinux" model="node" type="serverLinux">
+		<icon>[assets/swficon/serverLinux.swf]</icon>
+	</model>
+</models>

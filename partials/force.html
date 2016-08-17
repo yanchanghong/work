@@ -1,0 +1,37 @@
+<!-- Content Header (Page header) -->
+<section class="content-header">
+  <h1>
+    网络拓扑
+    <small></small>
+  </h1>
+  <ol class="breadcrumb">
+
+  </ol>
+</section>
+
+<!-- Main content -->
+<section class="content">
+
+  <!-- row -->
+  <div class="row">
+		<div class="col-md-2">
+		  <span>在线:{{onlineTotal}}&nbsp;&nbsp;</span>
+		  <span>离线:{{offlineTotal}}</div>
+	  
+    <div class="col-md-10">
+      <div class="viewchart" style="height: 600px;" ng-controller="ViewForceCtrl" echarts3-dom></div>
+    </div>
+	 </div >
+    <!-- /.col -->
+  </div>
+   
+   <tbody>
+                <tr ng-repeat="item in kpiList">
+                  <td>{{item.data}}</a>
+                  </td>
+                  <td>{{item.timestamp | date:'yyyy-MM-dd HH:mm:ss'}}</td>
+                </tr>
+              </tbody>
+  <!-- /.row -->
+</section>
+<!-- /.content -->

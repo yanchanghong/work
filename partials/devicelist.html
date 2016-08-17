@@ -1,0 +1,96 @@
+<!-- Content Header (Page header) -->
+ <style type="text/css">
+   table thead th {
+  cursor: default;
+}
+
+table thead th.sortable {
+  cursor: pointer;
+}
+
+.relative {
+  position: relative;
+}
+
+.relative .popover {
+  width: 200px;
+}
+
+.pagination-sm {
+  margin: 0;
+}
+
+.global-search {
+  margin-bottom: 20px;
+}
+    </style>
+<section class="content-header">
+  <h1>设备指令<small></small></h1>
+  <ol class="breadcrumb">
+    <li><a href="#index"><i class="fa fa-dashboard"></i> 首页</a></li>
+    <li class="active">设备指令</li>
+  </ol>
+</section>
+
+<!-- Main content -->
+ 
+<section class="content" >
+  <div class="row">
+
+  <form role="form" class="form-horizontal tab-pane active" name="myForm" novalidate ng-submit="processForm()">
+    <div class="col-xs-12">
+      <!-- Application buttons -->
+      <div class="box">
+        <div class="box-header">
+			<h3 class="box-title">设备指令</h3>
+        </div>
+       
+        <!-- /.box-body -->
+           <!-- /.box-header -->
+       <div class="box-body">
+      
+	  
+	  <table class="table table-bordered table-hover">
+  <thead>
+  <tr>
+    <th ng-repeat="column in columns"  ng-click="vm.sort.toggle(column)"
+        ng-class="{sortable: column.sortable !== false}" >
+      {{column.label}}
+      <i ng-if="column.name === vm.sort.column && vm.sort.direction"
+         class="glyphicon {{vm.sort.direction}}"></i>
+    </th>
+  </tr>
+  </thead>
+  <tbody>
+  
+  <tr ng-repeat="item in tagList">
+   
+    <td>
+      <span ng-if="!item.$editing">{{item.deviceId}}</span>
+      <input type="text" class="form-control" ng-model="item.deviceId" ng-if="item.$editing"/>
+    </td>
+    <td style="TABLE-LAYOUT:fixed;WORD-BREAK:break-all">
+      <span ng-if="!item.$editing">{{item.devicetag}}</span>
+    </td>
+    <td >
+      <span ng-if="!item.$editing">{{item.devicetime}}</span>
+      <input type="text" class="form-control" ng-model="item.devicetime" ng-if="item.$editing"/>
+    </td>
+   
+  </tr>
+  </tbody>
+</table>
+         
+
+        </div>
+      </div>
+      <!-- /.box -->
+
+  
+    <!-- /.col -->
+  </div>
+   </form>
+  <!-- /.row -->
+</section>
+
+<!-- /.content -->
