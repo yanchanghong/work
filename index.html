@@ -278,8 +278,7 @@ ng\:form {
 						<ul id="manager" class="nav nav-list collapse menu-second">
 						<li><a id="snedconfig" style="cursor: pointer;"><i
 									class="icon-pencil"></i> 设备配置</a></li>
-									<li><a id="snedconfig" style="cursor: pointer;"><i
-									class="icon-pencil"></i> 设备配置</a></li>
+									
 							<li><a id="timeshezhi" style="cursor: pointer;"><i
 									class="icon-pencil"></i> 时间设置</a></li>
 							<li><a id="wangluojiekou" style="cursor: pointer;"><i
@@ -393,7 +392,7 @@ ng\:form {
 			//判断当前页面是首页
 			// console.log(window.location.hash);
 			var path = window.location.hash;
-			if (path == "#/force") {
+			if (path == "#/force" || path == "#/nodelist") {
 				window.location.reload();
 			}
 			//window.location.reload();
